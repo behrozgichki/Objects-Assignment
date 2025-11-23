@@ -2,8 +2,11 @@
 const studentTable = document.querySelector("#studentTable")
 let students = [
     { name: "Ali", score: 90 },
-    { name: "Ali", score: 30 },
-    { name: "Abid", score: 50 }
+    { name: "Mustafa", score: 30 },
+    { name: "Abid", score: 50 },
+    { name: "Shahid", score: 28 },
+    { name: "Sufyan", score: 31 },
+    { name: "Zaryab", score: 89 }
 
 ]
 students.forEach(function (student) {
@@ -40,6 +43,41 @@ function filterByPrice(min, max){
 }
 console.log("//Q3", filterByPrice(50 , 200));
 // Q4
+function countWords() {
+    let text = document.querySelector("#para").value;
+
+    let words = text.split(" ");
+    let cleanWords = [];
+
+   
+    for (let i = 0; i < words.length; i++) {
+        if (words[i] !== "") {
+            cleanWords.push(words[i]);
+        }
+    }
+
+    
+    let freq = {};
+    for (let i = 0; i < cleanWords.length; i++) {
+        let w = cleanWords[i];
+        if (freq[w]) {
+            freq[w]++;
+        } else {
+            freq[w] = 1;
+        }
+    }
+
+
+    let result = document.querySelector("#result");
+    result.innerHTML = "";
+
+    let keys = Object.keys(freq);
+
+    for (let i = 0; i < keys.length; i++) {
+        let word = keys[i];
+        result.innerHTML += "<li>" + word + " : " + freq[word] + "</li>";
+    }
+}
 
 // Q5
 let users = [
@@ -60,3 +98,48 @@ users.forEach(user => {
 });
 
 console.log("//Q5",grouped);
+// Q6
+let productsLi = [
+    {name : "Gaming Pc" , price : 200},
+    {name : "Xbox" , price : 500},
+    {name : "Ps5" , price : 800},
+    {name : "Video Game" , price : 150},
+    
+]
+let ascending = true
+function displayProducts() {
+   let list =  document.querySelector("#productsList")
+   list.innerHTML = ""
+       for (let i = 0; i < productsLi.length; i++) {
+        list.innerHTML += "<li>" + productsLi[i].name + " - $" + productsLi[i].price + "</li>";
+    }
+}
+function sortPrice() {
+    if (ascending) {
+        productsLi.sort(function (a,b) {
+            return a.price - b.price;
+        });
+    }else{
+        productsLi.sort(function (a,b) {
+        
+        return b.price - a.price
+    })
+}
+ascending = !ascending
+displayProducts()
+}
+displayProducts()
+// Q7
+const userName = document.querySelector("#name")
+const email = document.querySelector("#email")
+const age = document.querySelector("#age")
+function getValue() {
+    const obj = {
+        userName : userName.value,
+        email : email.value,
+        age : age.value
+
+    }
+    console.log(obj);
+    
+}
