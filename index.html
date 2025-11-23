@@ -4,30 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Objects Assignment</title>
+    
 </head>
 <body>
-    <h1>Hello Objects</h1>
-    <!-- Q1 -->
-<table border="1" id="studentTable">
+    <h1>Hello Objects</h1><hr>
+<!-- Q1: Student Table -->
+  <h2>Q1: Display Student Table</h2>
+<table border="1" id="studentTableQ1">
     <tr>
         <th>Name</th>
-        
         <th>Score</th>
     </tr>
 </table>
-<!-- Q4 -->
- <textarea name="" id="para"></textarea>
- <button id="countClick"  onclick="countWords()">Count Words</button>
- <ul id="result"></ul>
- <!-- Q6 -->
-  <ul id="productsList"></ul>
-  <button onclick="sortPrice()">Sort Price</button><br><br>
-<!-- Q7 -->
- <input type="text" id="name" placeholder="Enter your name">
- <input type="text" id="email" placeholder="Enter your email">
- <input type="number" id="age" placeholder="Enter your age">
- <button onclick="getValue()">Sumbit</button>
 
+<!-- Q4: Word Counter -->
+   <h2>Q4: Count Words in Text</h2>
+
+<textarea id="paraQ4" placeholder="Enter text..."></textarea>
+<button onclick="countWordsQ4()">Count Words</button>
+<ul id="resultQ4"></ul>
+
+<!-- Q6: Sort Products -->
+  <h2>Q6: Sort Products by Price</h2>
+<ul id="productsListQ6"></ul>
+<button onclick="sortPriceQ6()">Sort Price</button><br><br>
+
+<!-- Q7: Input to Object -->
+ <h2>Q7: Create Object from Inputs</h2>
+<input type="text" id="nameQ7" placeholder="Enter your name">
+<input type="text" id="emailQ7" placeholder="Enter your email">
+<input type="number" id="ageQ7" placeholder="Enter your age">
+<button onclick="getValueQ7()">Submit</button>
+
+<!-- Q8: Display Nested Object -->
+ <h2>Q8: Display Nested Object</h2>
+
+<div id="userInfoQ8"></div>
+
+<!-- Q9: Cart Total -->
+ <h2>Q9: Cart Total</h2>
+<h4>Cart</h4>
+<div id="itemsQ9"></div>
+
+<!-- Q10: Filter Items -->
+   <h2>Q10: Filter Items by Category</h2>
+<div class="filters">
+  <label><input type="checkbox" value="Fruits" class="categoryQ10" onchange="filterItemsQ10()"> Fruits</label>
+  <label><input type="checkbox" value="Vegetables" class="categoryQ10" onchange="filterItemsQ10()"> Vegetables</label>
+</div>
+<div id="containerQ10"></div>
+
+<!-- ---------------- Q11 ---------------- -->
+<div class="exercise" id="q11">
+  <h2>Q11: Live Search List</h2>
+  <input type="text" id="searchInputQ11" placeholder="Search names..." onkeyup="liveSearchQ11()">
+  <div id="listContainerQ11"></div>
+</div>
+
+<!-- ---------------- Q12 ---------------- -->
+<div class="exercise" id="q12">
+  <h2>Q12: To-Do App</h2>
+  <input type="text" id="taskInputQ12" placeholder="Enter task">
+  <button onclick="addTaskQ12()">Add Task</button>
+  <div id="taskContainerQ12"></div>
+</div>
+
+<!-- ---------------- Q13 ---------------- -->
+<div class="exercise" id="q13">
+  <h2>Q13: Form to Object Array</h2>
+  <input type="text" id="nameInputQ13" placeholder="Name">
+  <input type="text" id="emailInputQ13" placeholder="Email">
+  <button onclick="submitFormQ13()">Submit</button>
+  <div id="userContainerQ13"></div>
+</div>
+
+<!-- ---------------- Q14 ---------------- -->
+<div class="exercise" id="q14">
+  <h2>Q14: Edit Object in List</h2>
+  <div id="userContainerQ14"></div>
+</div>
+
+<!-- ---------------- Q15 ---------------- -->
+<div class="exercise" id="q15">
+  <h2>Q15: Dynamic Table Generator</h2>
+  <div id="tableContainerQ15"></div>
+</div>
+
+<!-- ---------------- Q16 ---------------- -->
+<div class="exercise" id="q16">
+  <h2>Q16: Frequency of Characters</h2>
+  <input type="text" id="textInputQ16" placeholder="Type text..." onkeyup="charFrequencyQ16()">
+  <div id="freqContainerQ16"></div>
+</div>
+
+<!-- ---------------- Q17 ---------------- -->
+<div class="exercise" id="q17">
+  <h2>Q17: Nested Category Display</h2>
+  <div id="categoryContainerQ17"></div>
+</div>
+
+<!-- ---------------- Q18 ---------------- -->
+<div class="exercise" id="q18">
+  <h2>Q18: Sort by Multiple Properties</h2>
+  <pre id="outputQ18"></pre>
+</div>
+
+<!-- ---------------- Q19 ---------------- -->
+<div class="exercise" id="q19">
+  <h2>Q19: Search and Highlight</h2>
+  <input type="text" id="searchInputQ19" placeholder="Search text..." onkeyup="highlightQ19()">
+  <div id="textContainerQ19">
+    <p>Ali likes cricket.</p>
+    <p>Sara likes swimming.</p>
+    <p>Usman likes reading.</p>
+  </div>
+</div>
+
+<!-- ---------------- Q20 ---------------- -->
+<div class="exercise" id="q20">
+  <h2>Q20: Custom Dropdown from Object Data</h2>
+  <select id="countrySelectQ20" onchange="showCountryQ20()">
+    <option value="">Select Country</option>
+  </select>
+  <div id="countryContainerQ20"></div>
+</div>
     <script src="app.js"></script>
 </body>
 </html>
